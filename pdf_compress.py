@@ -3,12 +3,12 @@ import os
 
 def compress_pdf_target_1_6mb(input_path, output_path):
     """
-    Tente d'atteindre ~1.5 MB en passant en niveaux de gris et en ajustant la compression.
+    Tente d'atteindre une bonne compression en passant en niveaux de gris et en ajustant la compression.
     """
-    # --- RÉGLAGES CIBLÉS POUR 1.6 MB ---
+    # --- RÉGLAGES CIBLÉS POUR une bonne compression du PDF ---
     # Niveaux de gris : True (Enlève la couleur, énorme gain de place)
     GRAYSCALE = True 
-    # Qualité JPEG : 40 (Suffisant pour du texte administratif)
+    # Qualité JPEG : 40 (Suffisant pour du texte scanné)
     QUALITY = 40
     # Résolution : 130 DPI (Un tout petit peu moins que 140, mais reste lisible)
     DPI = 130
@@ -60,7 +60,7 @@ def compress_pdf_target_1_6mb(input_path, output_path):
         if 'new_doc' in locals(): new_doc.close()
 
 if __name__ == "__main__":
-    input_file = "Notice de renseignements à caractère financier_Mireya DARRAS.pdf"
-    output_file = "Notice de renseignements à caractère financier_Mireya DARRAS_compress.pdf"
+    input_file = "fichier.pdf"
+    output_file = "fichier_compress.pdf"
     
     compress_pdf_target_1_6mb(input_file, output_file)
