@@ -1,1 +1,2 @@
-pymupdfpdf2docx
+pymupdf
+pdf2docx
